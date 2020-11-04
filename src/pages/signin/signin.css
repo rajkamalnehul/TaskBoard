@@ -1,0 +1,79 @@
+.sign-up,h1{
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.sign-up{
+
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    margin: 70px auto 50px auto ;
+    text-align: center;
+    font-size: 15px;
+    justify-content: flex-start;
+    
+
+   
+}
+
+
+
+.input{
+    background: none;
+    background-color: #1b427d;
+    color:#ffffff;
+    
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 95%;
+    font-weight: lighter;
+    font-size: 15px;
+    
+    outline: none;
+    border: none;
+   
+    height: 15px;
+    text-decoration: none;
+}
+
+.fieldset{
+    margin:30px 0 0 0 ;
+    border: 1px solid;
+    
+   border-color:rgb(226, 226, 226);
+  
+    
+}
+.legend-tittle{
+    height: 20px;
+    
+    margin-bottom: -10px;
+}
+.checkbox{
+    text-align: left;
+    background-color: #1b427d ;
+    margin-top: 10px;
+    font-size: 14px;
+    
+   
+}
+
+
+.buttons{
+    margin-top: 50px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #3a65a5;
+    
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #3a65a5;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color:#3a65a5;
+  }
