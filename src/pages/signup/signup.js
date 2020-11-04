@@ -1,8 +1,7 @@
 import React from 'react';
  import  './signup.css';
  import CustomButton from '../../components/customButton/customButton.js';
- import Alert from '@material-ui/lab/Alert';
-
+ 
  class SignUp extends React.Component{
      constructor(props){
       super(props);
@@ -48,7 +47,7 @@ import React from 'react';
 
       render(){
           return(
-          
+            <div className='signup-back'>
             <div className='sign-up'>
             <h1 className='title'>Sign Up!</h1>
             
@@ -113,6 +112,7 @@ import React from 'react';
                     <CustomButton type="submit">Sign Up</CustomButton>
                  </div>
             </form>
+            </div>
             </div>
           
              )

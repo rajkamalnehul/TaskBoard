@@ -23,25 +23,32 @@ class MyTask extends React.Component {
          </div>
 
       <div className="add-task">
-        <img src={add} alt="add-new-task" />
-        <p>Add a task</p>
+       
+        <input
+        placeholder="New Task"
+        className="new-list-name"
+        value={this.props.tasks}
+        onChange={(e) => this.props.handleChangeTask(e)}
+      />
+      <div  onClick={()=>this.props.addtask()}> <img src={add} alt="add-new-task"/> </div>
+     
       </div>
-
+      {this.props.taskList.map((i) => (      
       <div className="task-item">
         <img src={circle} alt="add-new-task" />
         <div className="list-item-right-section">
-          <p>Add a task</p>
-          <img src={edit} alt="edit-task" />
+          <p>{i}</p>
+          <img src={edit} alt="edit-task"  onClick={()=>this.props.showEditModal(i)} />
         </div>
       </div>
-
+      ))}
       <div className="heading complete">
-        <p>Completed(1)</p>
+        <p></p>
       </div>
       <div className="task-item">
-        <img src={complete} alt="add-new-task" />
+        
 
-        <p>Add a task</p>
+       
       </div>
     </div>
     ))}

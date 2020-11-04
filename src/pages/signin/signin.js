@@ -40,7 +40,7 @@ import React from 'react';
 
       render(){
           return(
-          
+            <div className="signin-back">
             <div className='sign-up'>
             <h1 className='title'>Log In!</h1>
             
@@ -83,6 +83,7 @@ import React from 'react';
                     <CustomButton type="submit">Log In</CustomButton>
                  </div>
             </form>
+            </div>
             </div>
           
              )
