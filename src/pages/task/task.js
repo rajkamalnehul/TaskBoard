@@ -7,6 +7,7 @@ import logo from "../../assets/logo.png";
 import add from "../../assets/baseline_add_circle_black_48dp.png";
 import "./task.css";
 import MyTask from '../../components/TaskCard/taskcard';
+import {without} from 'lodash';
 
 export default class TaskBoard extends React.Component {
   state = {
@@ -36,13 +37,21 @@ export default class TaskBoard extends React.Component {
     tempList.push(this.state.newListVal);
     
     this.setState({
-      lists:tempList,lastIndex:this.state.lastIndex+1,
+      lists:tempList,lastIndex:index+1,
       newListVal: "",})
     
     
-    console.log(this.state.lists);
+    
+    console.log(this.state.lastIndex)
     this.hideModal();
   };
+
+  deletetask=(task)=>{
+    let tempTask = this.state.lists;
+    tempTask = without(tempTask,task);
+    this.setState({lists:tempTask})
+    console.log(this.state.lists);
+  }
 
  
   render() {
@@ -55,9 +64,7 @@ export default class TaskBoard extends React.Component {
           <div className="profile-photo"></div>
         </div>
         <div className="main">
-          {this.state.lists.map((item) => (
-            <MyTask name={item} />
-          ))}
+          <MyTask  deleteTask={this.deletetask} key={this.state.lastIndex} list={this.state.lists}/>
         </div>
        
 
